@@ -1,0 +1,58 @@
+#light-mode-to-dark-mode-toggle {
+    margin: 12px 10px;
+
+    @media(min-width: 768px) {
+        margin: 22px 10px;
+    }
+
+    i {
+        color: var(--color-tom-thumb);
+        font-size: 1.4rem;
+        align-content: center;
+    }
+
+    button {
+        background: none;
+        border: 2px solid transparent;
+        border-radius: var(--border-radius-sm);
+
+        @media (hover: hover) {
+            &:hover {
+                background-color: var(--color-judge-gray);
+
+                i {
+                    color: var(--color-pearl-bush);
+                }
+            }
+        }
+
+        &:focus-visible {
+            outline: none;
+            border-color: var(--color-tom-thumb);
+        }
+    }
+}
+
+html[data-theme="dark"] body {
+    #light-mode-to-dark-mode-toggle {
+        button {
+            @media (hover: hover) {
+                &:hover {
+                    background-color: var(--color-feta);
+
+                    i {
+                        color: var(--color-tom-thumb);
+                    }
+                }
+            }
+
+            &:focus-visible {
+                border-color: var(--color-pearl-bush);
+            }
+        }
+
+        i {
+            color: var(--color-pearl-bush)
+        }
+    }
+}

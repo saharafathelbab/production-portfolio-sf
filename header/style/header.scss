@@ -1,0 +1,20 @@
+body header {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    width: var(--100-percent);
+    top: 0px;
+    background-color: var(--color-pearl-bush);
+
+    @media(min-width: 1700px) {
+        position: relative;
+        width: 60%;
+        margin: auto;
+    }
+}
+
+html[data-theme="dark"] body {
+    header {
+        background-color: var(--color-tom-thumb);
+    }
+}

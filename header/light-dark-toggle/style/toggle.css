@@ -1,0 +1,45 @@
+#light-mode-to-dark-mode-toggle {
+  margin: 12px 10px;
+}
+@media (min-width: 768px) {
+  #light-mode-to-dark-mode-toggle {
+    margin: 22px 10px;
+  }
+}
+#light-mode-to-dark-mode-toggle i {
+  color: var(--color-tom-thumb);
+  font-size: 1.4rem;
+  align-content: center;
+}
+#light-mode-to-dark-mode-toggle button {
+  background: none;
+  border: 2px solid transparent;
+  border-radius: var(--border-radius-sm);
+}
+@media (hover: hover) {
+  #light-mode-to-dark-mode-toggle button:hover {
+    background-color: var(--color-judge-gray);
+  }
+  #light-mode-to-dark-mode-toggle button:hover i {
+    color: var(--color-pearl-bush);
+  }
+}
+#light-mode-to-dark-mode-toggle button:focus-visible {
+  outline: none;
+  border-color: var(--color-tom-thumb);
+}
+
+@media (hover: hover) {
+  html[data-theme=dark] body #light-mode-to-dark-mode-toggle button:hover {
+    background-color: var(--color-feta);
+  }
+  html[data-theme=dark] body #light-mode-to-dark-mode-toggle button:hover i {
+    color: var(--color-tom-thumb);
+  }
+}
+html[data-theme=dark] body #light-mode-to-dark-mode-toggle button:focus-visible {
+  border-color: var(--color-pearl-bush);
+}
+html[data-theme=dark] body #light-mode-to-dark-mode-toggle i {
+  color: var(--color-pearl-bush);
+}/*# sourceMappingURL=toggle.css.map */

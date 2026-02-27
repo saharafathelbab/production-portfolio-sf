@@ -1,0 +1,86 @@
+body .parent-info {
+    margin: 88px 0px 40px;
+    padding: 0px 45px;
+    height: auto;
+
+    @media(min-width: 1700px) {
+        width: 50%;
+        margin: auto;
+    }
+
+    .child-info {
+        .information {
+            .title {
+                @media(min-width: 768px) {
+                    text-align: left;
+                }
+            }
+
+            .description {
+                padding-bottom: 10px;
+
+                @media(min-width: 768px) {
+                    text-align: left;
+                }
+            }
+
+            .divider {
+                margin: 16px 0px;
+            }
+
+            .updates {
+                @media(min-width: 950px) {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 16px;
+                }
+
+                section {
+                    padding-bottom: 13px;
+
+                    .content-block {
+                        padding: 8px 0px;
+                    }
+
+                    .title {
+                        font-size: 1.5rem;
+                        text-align: left;
+                    }
+
+                    .description {
+                        text-align: left;
+                        padding-bottom: 0px;
+                    }
+
+                    .reg-link {
+                        @media(min-width: 768px) {
+                            padding: 6px 0;
+                        }
+                    }
+
+                    .books {
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 33px;
+
+                        .book {
+                            text-align: center;
+                            margin: 0px;
+
+                            .book-photo {
+                                height: 141px;
+                                border-radius: 10px;
+                            }
+
+                            figcaption {
+                                margin-top: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+
+    }
+}

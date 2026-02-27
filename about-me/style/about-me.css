@@ -1,0 +1,94 @@
+body .parent-info {
+  margin: 50px 0px 40px;
+  padding: 0px 45px;
+  height: auto;
+}
+@media (min-width: 1700px) {
+  body .parent-info {
+    width: 80%;
+    margin: auto;
+  }
+}
+body .parent-info .child-info {
+  text-align: center;
+}
+@media (min-width: 768px) {
+  body .parent-info .child-info {
+    margin-top: 30px;
+  }
+}
+@media (min-width: 1023px) {
+  body .parent-info .child-info {
+    margin-top: 50px;
+    display: flex;
+    -moz-column-gap: 60px;
+         column-gap: 60px;
+    justify-content: center;
+  }
+}
+body .parent-info .child-info .profile .profile-photo {
+  height: 103px;
+  border-radius: 180px;
+}
+@media (min-width: 1023px) {
+  body .parent-info .child-info .profile .profile-photo {
+    height: 220px;
+  }
+}
+@media (min-width: 1023px) {
+  body .parent-info .child-info .information {
+    width: 60%;
+  }
+}
+@media (min-width: 1700px) {
+  body .parent-info .child-info .information {
+    width: 50%;
+  }
+}
+@media (min-width: 1023px) {
+  body .parent-info .child-info .information .title {
+    text-align: left;
+  }
+}
+body .parent-info .child-info .information .description {
+  padding-bottom: 10px;
+}
+@media (min-width: 1023px) {
+  body .parent-info .child-info .information .description {
+    text-align: left;
+  }
+}
+@media (min-width: 1700px) {
+  body .parent-info .child-info .information .extracurriculars {
+    display: flex;
+    -moz-column-gap: 10px;
+         column-gap: 10px;
+    justify-content: center;
+  }
+}
+body .parent-info .child-info .information .extracurriculars figure {
+  padding: 0px;
+  margin: 0px;
+}
+body .parent-info .child-info .information .extracurriculars figure .extracurricular {
+  width: 300px;
+  padding-top: 20px;
+}
+@media (min-width: 768px) {
+  body .parent-info .child-info .information .extracurriculars figure .extracurricular {
+    width: var(--100-percent);
+  }
+}
+body .parent-info .child-info .information .extracurriculars figure figcaption {
+  font-size: var(--font-size-base);
+  color: var(--color-tom-thumb);
+}
+@media (min-width: 768px) {
+  body .parent-info .child-info .information .extracurriculars figure figcaption {
+    margin-top: 5px;
+  }
+}
+
+html[data-theme=dark] body .parent-info .child-info .information .extracurriculars figure figcaption {
+  color: var(--color-pearl-bush);
+}/*# sourceMappingURL=about-me.css.map */

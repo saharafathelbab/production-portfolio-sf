@@ -1,0 +1,13 @@
+#additional-links {
+  padding: 0px 20px;
+  align-self: end;
+}
+@media (min-width: 1023px) {
+  #additional-links {
+    padding: 20px;
+  }
+}
+#additional-links .footer-content .parent-info {
+  margin-top: 40px;
+  height: auto;
+}/*# sourceMappingURL=footer.css.map */

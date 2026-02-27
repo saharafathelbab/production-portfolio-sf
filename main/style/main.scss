@@ -1,0 +1,194 @@
+/* using name that color: https://chir.ag/projects/name-that-color/#4C472F */
+
+:root {
+    --color-pearl-bush: #E9E4D8;
+    --color-tom-thumb: #374F2F;
+    --color-feta: #DEF8D5;
+    --color-judge-gray: #4C472F;
+    --color-lunar-green: #424A40;
+    color-scheme: light dark;
+    /* informs the browser about the supported color schemes + allows the browser to apply its own default styles (like form controls and scrollbars) accordingly.*/
+
+    /*Font sizes*/
+    --font-size-base: 1rem;
+    --font-size-sm: 1.3rem;
+    --font-size-med: 2.5rem;
+    --font-size-lg: 3.5rem;
+
+    /*Border Radius*/
+    --border-radius-sm: 5px;
+
+    /*Height + Width Dimensions*/
+    --dvh: 100dvh;
+    --100-percent: 100%;
+}
+
+body {
+    background-color: var(--color-pearl-bush);
+    margin: 0px;
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+    height: var(--100-percent);
+    min-height: var(--dvh);
+
+    .visually-hidden {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0px;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border-width: 0;
+    }
+
+    .parent-info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: var(--dvh);
+
+        .child-info {
+            .title {
+                color: var(--color-tom-thumb);
+                font-size: var(--font-size-med);
+                text-align: center;
+                padding: 13px 0px;
+                margin: 0px;
+
+                @media(min-width: 768px) {
+                    font-size: var(--font-size-lg);
+                }
+            }
+
+            .description {
+                color: var(--color-tom-thumb);
+                font-size: var(--font-size-base);
+                line-height: 1.5;
+                text-align: center;
+                margin: 0px;
+
+                @media(min-width: 768px) {
+                    font-size: var(--font-size-sm);
+                }
+            }
+
+            .buttons {
+                display: flex;
+                justify-content: center;
+                gap: 15px;
+            }
+        }
+    }
+
+    .button,
+    .link {
+        font-size: var(--font-size-base);
+        text-decoration: none;
+        color: var(--color-pearl-bush);
+        background-color: var(--color-tom-thumb);
+        border-radius: var(--border-radius-sm);
+        outline: 2px solid transparent;
+
+        &:focus-visible {
+            outline-color: var(--color-tom-thumb);
+            outline-offset: 3px;
+        }
+
+        @media (hover: hover) {
+            &:hover {
+                background-color: var(--color-judge-gray)
+            }
+        }
+    }
+
+    .button {
+        padding: 12px 35px;
+
+        @media(min-width: 768px) {
+            font-size: var(--font-size-sm);
+        }
+    }
+
+    .link {
+        padding: 12px 6px;
+    }
+
+    .reg-link {
+        text-decoration: underline;
+        color: var(--color-judge-gray);
+        font-weight: 700;
+        border-radius: var(--border-radius-sm);
+        padding: 2px;
+
+        @media (hover: hover) {
+            &:hover {
+                color: var(--color-pearl-bush);
+                background-color: var(--color-tom-thumb)
+            }
+        }
+
+        &:focus-visible {
+            outline: 2px solid var(--color-tom-thumb);
+            outline-offset: 3px;
+        }
+
+    }
+
+    .divider {
+        background-color: var(--color-tom-thumb);
+        border: none;
+        height: 1px;
+    }
+}
+
+html[data-theme="dark"] body {
+    background-color: var(--color-tom-thumb);
+
+    .parent-info .child-info {
+        .title {
+            color: var(--color-pearl-bush);
+        }
+
+        .description {
+            color: var(--color-pearl-bush);
+        }
+    }
+
+    .button,
+    .link {
+        color: var(--color-tom-thumb);
+        background-color: var(--color-feta);
+
+        &:focus-visible {
+            outline-color: var(--color-pearl-bush);
+            outline-offset: 3px;
+        }
+
+        @media (hover: hover) {
+            &:hover {
+                background-color: var(--color-pearl-bush);
+            }
+        }
+    }
+
+    .reg-link {
+        color: var(--color-feta);
+
+        @media (hover: hover) {
+            &:hover {
+                color: var(--color-tom-thumb);
+                background-color: var(--color-pearl-bush)
+            }
+        }
+
+        &:focus-visible {
+            outline-color: var(--color-pearl-bush);
+        }
+    }
+
+    .divider {
+        background-color: var(--color-pearl-bush);
+    }
+}

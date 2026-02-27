@@ -1,0 +1,101 @@
+body .parent-info {
+    margin: 50px 0px 40px;
+    padding: 0px 45px;
+    height: auto;
+
+    @media(min-width: 1700px) {
+        width: 80%;
+        margin: auto;
+    }
+
+    .child-info {
+        text-align: center;
+
+        @media(min-width: 768px) {
+            margin-top: 30px;
+        }
+
+        @media(min-width: 1023px) {
+            margin-top: 50px;
+            display: flex;
+            column-gap: 60px;
+            justify-content: center;
+        }
+
+        .profile {
+            .profile-photo {
+                height: 103px;
+                border-radius: 180px;
+
+                @media(min-width: 1023px) {
+                    height: 220px;
+                }
+            }
+        }
+
+        .information {
+            @media(min-width: 1023px) {
+                width: 60%;
+            }
+
+            @media(min-width: 1700px) {
+                width: 50%;
+            }
+
+            .title {
+                @media(min-width: 1023px) {
+                    text-align: left;
+                }
+            }
+
+            .description {
+                padding-bottom: 10px;
+
+                @media(min-width: 1023px) {
+                    text-align: left;
+                }
+            }
+
+            .extracurriculars {
+                @media(min-width: 1700px) {
+                    display: flex;
+                    column-gap: 10px;
+                    justify-content: center;
+                }
+
+                figure {
+                    padding: 0px;
+                    margin: 0px;
+
+                    .extracurricular {
+                        width: 300px;
+                        padding-top: 20px;
+
+                        @media(min-width: 768px) {
+                            width: var(--100-percent);
+                        }
+                    }
+
+                    figcaption {
+                        font-size: var(--font-size-base);
+                        color: var(--color-tom-thumb);
+
+                        @media(min-width: 768px) {
+                            margin-top: 5px;
+                        }
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+}
+
+html[data-theme="dark"] body {
+    .parent-info .child-info .information .extracurriculars figure figcaption {
+        color: var(--color-pearl-bush);
+    }
+}
