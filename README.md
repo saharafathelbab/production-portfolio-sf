@@ -7,8 +7,8 @@
 <br/>
 <strong>Safari:&nbsp;</strong>http://127.0.0.1:8000 | ```http://127.0.0.1:<port>```
 
-### Staging
-https://staging-portfolio-sf.netlify.app/
+### Production
+https://saharafathelbab.netlify.app/
 
 ### Open Cypress
 ```npx cypress open```
