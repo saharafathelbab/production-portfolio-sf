@@ -101,6 +101,26 @@ body .button {
     font-size: var(--font-size-sm);
   }
 }
+body button {
+  background: none;
+  border: 2px solid transparent;
+  border-radius: var(--border-radius-sm);
+}
+body button i {
+  color: var(--color-tom-thumb);
+}
+@media (hover: hover) {
+  body button:hover {
+    background-color: var(--color-judge-gray);
+  }
+  body button:hover i {
+    color: var(--color-pearl-bush);
+  }
+}
+body button:focus-visible {
+  outline: none;
+  border-color: var(--color-tom-thumb);
+}
 body .link {
   padding: 12px 6px;
 }
@@ -151,6 +171,20 @@ html[data-theme=dark] body .link:focus-visible {
   html[data-theme=dark] body .link:hover {
     background-color: var(--color-pearl-bush);
   }
+}
+html[data-theme=dark] body button i {
+  color: var(--color-pearl-bush);
+}
+@media (hover: hover) {
+  html[data-theme=dark] body button:hover {
+    background-color: var(--color-feta);
+  }
+  html[data-theme=dark] body button:hover i {
+    color: var(--color-tom-thumb);
+  }
+}
+html[data-theme=dark] body button:focus-visible {
+  border-color: var(--color-pearl-bush);
 }
 html[data-theme=dark] body .reg-link {
   color: var(--color-feta);

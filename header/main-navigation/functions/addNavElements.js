@@ -1,9 +1,9 @@
 export function addNavElements() {
     document.getElementById("main-navigation").innerHTML =
         `
-        <div class="menu-toggle" id="mobile-menu">
+        <button type="button" class="menu-toggle" id="mobile-menu" aria-label="Open Navigation Menu" aria-expanded="false" tabindex="0">
             <i class="fas fa-solid fa-bars" id= "icon-button"></i>
-        </div>
+        </button>
 
         <ul class="nav-links">
             <li><a class="nav-link port-lligat-slab-regular" href="/">Home</a></li>
