@@ -23,7 +23,17 @@ context('Main Navigation', () => {
             .should('have.css', 'display', 'none')
             .should('have.css', 'list-style-type', 'none')
 
+        cy.get('#main-navigation #mobile-menu')
+            .should('have.attr', 'aria-label', 'Open Navigation Menu')
+            .should('have.attr', 'aria-expanded', 'false')
+            .should('have.attr', 'tabindex', '0')
+
         cy.get('#main-navigation #mobile-menu #icon-button').click()
+
+        cy.get('#main-navigation #mobile-menu')
+            .should('have.css', 'padding', '0px')
+            .should('have.attr', 'aria-label', 'Close Navigation Menu')
+            .should('have.attr', 'aria-expanded', 'true')
 
         cy.get('#main-navigation #mobile-menu #icon-button')
             .should('have.class', 'fa-times')
@@ -99,17 +109,31 @@ context('Main Navigation', () => {
     it('Window Resized: Main Navigation', () => {
         cy.viewport(767, 667)
 
+        cy.get('#main-navigation #mobile-menu')
+            .should('have.attr', 'aria-label', 'Open Navigation Menu')
+            .should('have.attr', 'aria-expanded', 'false')
+            .should('have.attr', 'tabindex', '0')
+
         cy.get('#main-navigation #mobile-menu #icon-button').click()
 
-       cy.viewport(798, 667)
+        cy.viewport(798, 667)
 
         cy.get('#main-navigation .nav-links')
             .should('not.have.class', 'active')
 
+        cy.get('#main-navigation #mobile-menu')
+            .should('have.attr', 'aria-label', 'Open Navigation Menu')
+            .should('have.attr', 'aria-expanded', 'false')
+
         cy.viewport(767, 667)
-        
+
+        cy.get('#main-navigation #mobile-menu')
+            .should('have.attr', 'aria-label', 'Open Navigation Menu')
+            .should('have.attr', 'aria-expanded', 'false')
+
         cy.get('#main-navigation #mobile-menu #icon-button')
             .should('have.class', 'fa-bars')
+
 
     })
 })

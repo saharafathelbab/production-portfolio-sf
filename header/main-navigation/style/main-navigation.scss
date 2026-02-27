@@ -33,11 +33,8 @@ body #main-navigation {
 
         i {
             cursor: pointer;
-            color: var(--color-tom-thumb);
             font-size: 1.4rem;
             align-content: center;
-            border: 2px solid transparent;
-            border-radius: var(--border-radius-sm);
         }
 
         @media(min-width: 768px) {
@@ -94,9 +91,6 @@ body #main-navigation {
 }
 
 html[data-theme="dark"] body {
-    #main-navigation .menu-toggle i {
-        color: var(--color-pearl-bush);
-    }
 
     #main-navigation:has(.active) {
         background-color: var(--color-pearl-bush);
