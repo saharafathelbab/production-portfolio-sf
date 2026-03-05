@@ -1,4 +1,4 @@
-# Netlify Functions.
+# Netlify Functions
 
 ### What are Netlifly Functions?
 Serverless functions, branded as Netlify Functions when running on Netlify, are a way to deploy server-side code as API endpoints. [Read More Here](https://www.netlify.com/blog/intro-to-serverless-functions/)

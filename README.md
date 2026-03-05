@@ -1,4 +1,4 @@
-# myPortfolio
+# My Portfolio
 
 ### Local environment - without Environment Variables on Netlify
 <strong>Put in VS Code terminal:</strong> ```python3 -m http.server 8000```
