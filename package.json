@@ -2,13 +2,13 @@
   "name": "myportfolio",
   "version": "1.0.0",
   "description": "redesign of portfolio",
-  "homepage": "https://github.com/saharafathelbab/myPortfolio#readme",
+  "homepage": "https://github.com/saharafathelbab/production-portfolio-sf#readme",
   "bugs": {
-    "url": "https://github.com/saharafathelbab/myPortfolio/issues"
+    "url": "https://github.com/saharafathelbab/production-portfolio-sf/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/saharafathelbab/myPortfolio.git"
+    "url": "git+https://github.com/saharafathelbab/production-portfolio-sf.git"
   },
   "license": "ISC",
   "author": "Sahara",
@@ -21,6 +21,7 @@
     "cypress": "^15.10.0"
   },
   "dependencies": {
+    "@netlify/functions": "^5.1.2",
     "cypress-real-events": "^1.15.0"
   }
 }

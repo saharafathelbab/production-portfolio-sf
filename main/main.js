@@ -6,6 +6,7 @@ import { addNavElements } from '/../header/main-navigation/functions/addNavEleme
 import { mobileMenuToggle } from '/../header/main-navigation/functions/mobileMenuToggle.js';
 import { addFooterElements } from '/footer/footer.js';
 import {revealContent} from '/main/helper-functions/revealContent.js'
+import { fetchAPIData } from '../latest-updates/GraphQL/fetchAPIData.js';
 
 // run on page load
 function onPageLoad() {
@@ -17,6 +18,7 @@ function onPageLoad() {
     mobileMenuToggle();
     addFooterElements();
     revealContent();
+    fetchAPIData();
 }
 
 window.onload = onPageLoad;
