@@ -1,4 +1,4 @@
-# How is it fetching the API data Securely?
+# How is it fetching the API data securely?
 With Netlify Functions. Please go to netlify/functions for more information
 
 # Fetch - Why await response.json()?
