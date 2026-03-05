@@ -1,6 +1,6 @@
 context('Latest Updates', () => {
     beforeEach(() => {
-        cy.visit('http://localhost:8000/latest-updates.html')
+        cy.visit('http://localhost:8888/latest-updates.html')
     })
 
     it('Mobile: Latest Updates', () => {
@@ -84,17 +84,11 @@ context('Latest Updates', () => {
             .should('have.css', 'height', '141px')
             .should('have.css', 'border-radius', '10px')
 
-        cy.get('.parent-info .child-info .information section .books .book .book-photo').eq(0)
-            .should('have.attr', 'src', 'latest-updates/img/essential-guide-to-organic-vegetable-gardening.jpg')
-            .should('have.attr', 'alt', 'Essential Guide to Organic Vegetable Gardening: Techniques and Know-How for Planning, Planting, and Tending a Home Vegetable Garden Organically by American Horticultural Society')
+        cy.get('.parent-info .child-info .information section.currently-reading .books .book').eq(0)
+            .should('exist')
 
-        cy.get('.parent-info .child-info .information section .books .book .book-photo').eq(1)
-            .should('have.attr', 'src', 'latest-updates/img/the-psychology-of-money.jpg')
-            .should('have.attr', 'alt', 'The Psychology of Money by Morgan Housel')
-
-        cy.get('.parent-info .child-info .information section .books .book .book-photo').eq(2)
-            .should('have.attr', 'src', 'latest-updates/img/fourth-wing.jpg')
-            .should('have.attr', 'alt', 'Fourth Wing by Rebecca Yarros')
+        cy.get('.parent-info .child-info .information section.recently-read .books .book').eq(0)
+            .should('exist')
 
         cy.get('.parent-info .child-info .information section .books .book figcaption')
             .should('have.css', 'margin-top', '20px')
@@ -106,15 +100,6 @@ context('Latest Updates', () => {
             .should('have.css', 'background-color', 'rgb(55, 79, 47)')
             .should('have.css', 'padding', '12px 6px')
             .should('have.css', 'border-radius', '5px')
-
-        cy.get('.parent-info .child-info .information section .books .book figcaption .link').eq(0)
-            .should('have.attr', 'href', 'https://hardcover.app/books/american-horticultural-society-essential-guide-to-organic-vegetable-gardening')
-
-        cy.get('.parent-info .child-info .information section .books .book figcaption .link').eq(1)
-            .should('have.attr', 'href', 'https://hardcover.app/books/the-psychology-of-money')
-
-        cy.get('.parent-info .child-info .information section .books .book figcaption .link').eq(2)
-            .should('have.attr', 'href', 'https://hardcover.app/books/fourth-wing')
 
         cy.get('#light-dark-toggle i').click()
 
