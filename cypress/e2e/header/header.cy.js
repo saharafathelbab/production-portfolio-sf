@@ -1,6 +1,6 @@
 context('Header', () => {
     beforeEach(() => {
-        cy.visit('http://localhost:8000')
+        cy.visit('http://localhost:8888')
     })
 
     it('Header', () => {
@@ -13,12 +13,12 @@ context('Header', () => {
             .should('have.css', 'top', '0px')
             .should('have.css', 'background-color', 'rgb(233, 228, 216)')
 
-        cy.get('#light-dark-toggle i').click()
+        cy.get('#light-dark-toggle').click()
 
         cy.get('body header')
             .should('have.css', 'background-color', 'rgb(55, 79, 47)')
 
-        cy.get('#light-dark-toggle i').click()
+        cy.get('#light-dark-toggle').click()
     })
 
     it('Large Desktop 1700: Header', () => {

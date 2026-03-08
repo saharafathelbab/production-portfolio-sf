@@ -1,5 +1,11 @@
 .parent-info {
     .child-info {
+        width: 80%;
+
+        @media(min-width: 768px) {
+            width: 50%;
+        }
+
         .buttons {
             margin-top: 20px;
         }

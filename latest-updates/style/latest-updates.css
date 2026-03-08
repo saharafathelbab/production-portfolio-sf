@@ -29,7 +29,7 @@ body .parent-info .child-info .information .divider {
   body .parent-info .child-info .information .updates {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
+    gap: 30px;
   }
 }
 body .parent-info .child-info .information .updates section {
@@ -44,7 +44,6 @@ body .parent-info .child-info .information .updates section .title {
 }
 body .parent-info .child-info .information .updates section .description {
   text-align: left;
-  padding-bottom: 0px;
 }
 @media (min-width: 768px) {
   body .parent-info .child-info .information .updates section .reg-link {
@@ -66,4 +65,12 @@ body .parent-info .child-info .information .updates section .books .book .book-p
 }
 body .parent-info .child-info .information .updates section .books .book figcaption {
   margin-top: 20px;
+}
+body .parent-info .child-info .information .updates section.recently-read {
+  margin-top: 40px;
+}
+@media (min-width: 950px) {
+  body .parent-info .child-info .information .updates section.recently-read {
+    margin-top: 0px;
+  }
 }/*# sourceMappingURL=latest-updates.css.map */

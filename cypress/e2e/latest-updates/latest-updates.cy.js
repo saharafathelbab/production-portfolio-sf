@@ -1,6 +1,6 @@
 context('Latest Updates', () => {
     beforeEach(() => {
-        cy.visit('http://localhost:8888/latest-updates.html')
+        cy.visit('http://localhost:8888/latest-updates')
     })
 
     it('Mobile: Latest Updates', () => {
@@ -51,7 +51,6 @@ context('Latest Updates', () => {
         cy.get('.parent-info .child-info .information section h3.description')
             .should('have.class', 'namdhinggo-bold')
             .should('have.css', 'text-align', 'left')
-            .should('have.css', 'padding-bottom', '0px')
             .should('have.css', 'color', 'rgb(55, 79, 47)')
             .should('have.css', 'font-size', '16px')
             .should('have.css', 'line-height', '24px')
@@ -60,7 +59,6 @@ context('Latest Updates', () => {
         cy.get('.parent-info .child-info .information section p.description')
             .should('have.class', 'namdhinggo-regular')
             .should('have.css', 'text-align', 'left')
-            .should('have.css', 'padding-bottom', '0px')
             .should('have.css', 'color', 'rgb(55, 79, 47)')
             .should('have.css', 'font-size', '16px')
             .should('have.css', 'line-height', '24px')
@@ -90,6 +88,9 @@ context('Latest Updates', () => {
         cy.get('.parent-info .child-info .information section.recently-read .books .book').eq(0)
             .should('exist')
 
+        cy.get('.parent-info .child-info .information section.recently-read')
+            .should('have.css', 'margin-top', '40px')
+
         cy.get('.parent-info .child-info .information section .books .book figcaption')
             .should('have.css', 'margin-top', '20px')
 
@@ -101,7 +102,7 @@ context('Latest Updates', () => {
             .should('have.css', 'padding', '12px 6px')
             .should('have.css', 'border-radius', '5px')
 
-        cy.get('#light-dark-toggle i').click()
+        cy.get('#light-dark-toggle').click()
 
         cy.get('.parent-info .child-info .information .title')
             .should('have.css', 'color', 'rgb(233, 228, 216)')
@@ -125,7 +126,7 @@ context('Latest Updates', () => {
             .should('have.css', 'color', 'rgb(55, 79, 47)')
             .should('have.css', 'background-color', 'rgb(222, 248, 213)')
 
-        cy.get('#light-dark-toggle i').click()
+        cy.get('#light-dark-toggle').click()
 
     })
 
@@ -150,8 +151,11 @@ context('Latest Updates', () => {
 
         cy.get('.parent-info .child-info .information .updates')
             .should('have.css', 'display', 'grid')
-            .should('have.css', 'grid-template-columns', '422px 422px')
-            .should('have.css', 'gap', '16px')
+            .should('have.css', 'grid-template-columns', '415px 415px')
+            .should('have.css', 'gap', '30px')
+
+        cy.get('.parent-info .child-info .information section.recently-read')
+            .should('have.css', 'margin-top', '0px')
 
     })
 

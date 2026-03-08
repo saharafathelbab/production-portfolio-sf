@@ -1,6 +1,6 @@
 context('Home', () => {
     beforeEach(() => {
-        cy.visit('http://localhost:8000')
+        cy.visit('http://localhost:8888')
     })
 
     it('Mobile: Home', () => {
@@ -21,7 +21,7 @@ context('Home', () => {
             .should('have.css', 'margin', '0px')
 
         cy.get('.parent-info .child-info p')
-            .should('have.class', 'macondo-regular')
+            .should('have.class', 'namdhinggo-regular')
             .should('have.css', 'color', 'rgb(55, 79, 47)')
             .should('have.css', 'font-size', '16px')
             .should('have.css', 'line-height', '24px')
@@ -42,10 +42,13 @@ context('Home', () => {
             .should('have.css', 'padding', '12px 35px')
             .should('have.css', 'border-radius', '5px')
 
+        cy.get('.parent-info .child-info .buttons .button').eq(0)
+            .should('have.attr', 'href', 'documents/sahara-fathelbab-resume.pdf')
+        
         cy.get('.parent-info .child-info .buttons .button').eq(1)
-            .should('have.attr', 'href', 'mailto:saharafathelbab1@gmail.com')
+            .should('have.attr', 'href', '/latest-updates')
 
-        cy.get('#light-dark-toggle i').click()
+        cy.get('#light-dark-toggle').click()
 
 
         cy.get('.parent-info .child-info h1')
@@ -58,7 +61,7 @@ context('Home', () => {
             .should('have.css', 'color', 'rgb(55, 79, 47)')
             .should('have.css', 'background-color', 'rgb(222, 248, 213)')
 
-        cy.get('#light-dark-toggle i').click()
+        cy.get('#light-dark-toggle').click()
 
     })
 
@@ -80,12 +83,12 @@ context('Home', () => {
         cy.get('.parent-info .child-info .buttons .button')
             .should('have.css', 'font-size', '20.8px')
 
-        cy.get('#light-dark-toggle i').click()
+        cy.get('#light-dark-toggle').click()
 
         cy.get('.parent-info .child-info .buttons .button')
             .should('have.css', 'background-color', 'rgb(222, 248, 213)')
 
-        cy.get('#light-dark-toggle i').click()
+        cy.get('#light-dark-toggle').click()
 
     })
 })

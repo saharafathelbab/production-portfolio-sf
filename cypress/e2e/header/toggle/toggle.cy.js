@@ -1,6 +1,6 @@
 context('Toggle', () => {
     beforeEach(() => {
-        cy.visit('http://localhost:8000')
+        cy.visit('http://localhost:8888')
     })
 
     it('Mobile: Light and Dark Toggle', () => {
@@ -18,24 +18,26 @@ context('Toggle', () => {
             .should('have.css', 'height', '667px')
             .should('have.css', 'min-height', '667px')
 
-        cy.get('#light-mode-to-dark-mode-toggle i')
-            .should('have.css', 'color', 'rgb(55, 79, 47)')
-            .should('have.css', 'font-size', '22.4px')
-            .should('have.css', 'align-content', 'center')
-
-
-        cy.get('#light-mode-to-dark-mode-toggle button')
+        cy.get('#light-mode-to-dark-mode-toggle button ')
             .should('have.attr', 'aria-pressed', 'false')
-            .should('have.css', 'background', 'rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box')
+            .should('have.css', 'background-color', 'rgb(55, 79, 47)')
             .should('have.css', 'border', '2px solid rgba(0, 0, 0, 0)')
+            .should('have.css', 'border-radius', '30px')
+            .should('have.css', 'width', '55px')
+            .should('have.css', 'height', '28px')
+            .should('have.css', 'position', 'relative')
+            .should('have.css', 'background-color', 'rgb(55, 79, 47)')
 
-        cy.get('#light-dark-toggle i')
-            .should('have.class', 'fa-toggle-off')
+        cy.get('#light-mode-to-dark-mode-toggle button .toggle-circle')
+            .should('have.css', 'background-image', 'url("http://localhost:8888/header/light-dark-toggle/img/mobile-sun.svg")')
+            .should('have.css', 'width', '15.5px')
+            .should('have.css', 'height', '15.5px')
+            .should('have.css', 'position', 'absolute')
+            .should('have.css', 'top', '4px')
+            .should('have.css', 'left', '4px')
+            .should('have.css', 'transition', 'left 0.5s')
 
-        cy.get('#light-dark-toggle i').click()
-
-        cy.get('#light-dark-toggle i')
-            .should('have.class', 'fa-toggle-on')
+        cy.get('#light-dark-toggle').click()
 
         cy.get('html')
             .should('have.attr', 'data-theme', 'dark')
@@ -43,10 +45,17 @@ context('Toggle', () => {
         cy.get('body')
             .should('have.css', 'background-color', 'rgb(55, 79, 47)')
 
-        cy.get('#light-mode-to-dark-mode-toggle i')
-            .should('have.css', 'color', 'rgb(233, 228, 216)')
+        cy.get('#light-mode-to-dark-mode-toggle button ')
+            .should('have.attr', 'aria-pressed', 'true')
+            .should('have.css', 'background-color', 'rgb(233, 228, 216)')
 
-        cy.get('#light-dark-toggle i').press('Enter')
+        cy.get('#light-mode-to-dark-mode-toggle button .toggle-circle')
+            .should('have.css', 'background-image', 'url("http://localhost:8888/header/light-dark-toggle/img/mobile-moon.svg")')
+            .should('have.css', 'width', '15.4375px')
+            .should('have.css', 'height', '15.5px')
+            .should('have.css', 'left', '32px')
+
+        cy.get('#light-dark-toggle').press('Enter')
     })
 
     it('Desktop: Light and Dark Toggle', () => {
@@ -64,21 +73,22 @@ context('Toggle', () => {
             .should('have.css', 'margin', '22px 10px')
 
         cy.get('#light-mode-to-dark-mode-toggle button')
-            .should('have.css', 'border', '2px solid rgba(0, 0, 0, 0)')
-            .should('have.css', 'border-radius', '5px')
+            .should('have.css', 'width', '70px')
+            .should('have.css', 'height', '35px')
 
-        cy.get('#light-dark-toggle i').click()
+        cy.get('#light-mode-to-dark-mode-toggle button .toggle-circle')
+            .should('have.css', 'background-image', 'url("http://localhost:8888/header/light-dark-toggle/img/desktop-sun.svg")')
+            .should('have.css', 'width', '22.5px')
+            .should('have.css', 'height', '22.5px')
 
-        cy.get('#light-mode-to-dark-mode-toggle button').realHover()
-            .should('have.css', 'background-color', 'rgb(222, 248, 213)')
-            .within(() => {
-                cy.get('i')
-                    .should('have.css', 'color', 'rgb(55, 79, 47)')
-            })
+        cy.get('#light-dark-toggle').click()
 
-        cy.get('#light-mode-to-dark-mode-toggle button').focus()
-            .should('have.css', 'border-color', 'rgb(233, 228, 216)')
+        cy.get('#light-mode-to-dark-mode-toggle button .toggle-circle')
+            .should('have.css', 'background-image', 'url("http://localhost:8888/header/light-dark-toggle/img/desktop-moon.svg")')
+            .should('have.css', 'width', '22px')
+            .should('have.css', 'height', '23px')
+            .should('have.css', 'left', '36px')
 
-        cy.get('#light-dark-toggle i').press('Enter')
+        cy.get('#light-dark-toggle').press('Enter')
     })
 })

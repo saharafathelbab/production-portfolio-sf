@@ -1,7 +1,16 @@
-# How is it fetching the API data securely?
-With Netlify Functions. Please go to netlify/functions for more information
+# Overview
+```helper-functions```
+</br></br>
+Contains the functions used to add each individual item retrieved from the Hardcover.app API for both Currently Reading and Recently Read books to the HTML file.
 
-# Fetch - Why await response.json()?
+```fetchAPIData.js```
+</br></br>
+Contains the async function that fetches information from the API.
+
+### How is it fetching the API data securely?
+With Netlify Functions. Please go to [netlify/functions](../../netlify/functions/README.md) for more information
+
+### Fetch - Why await response.json()?
 
 ```
 const currentlyReadingResponse = await fetch('url to serverless function fetching api data)

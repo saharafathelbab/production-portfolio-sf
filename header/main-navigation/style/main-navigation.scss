@@ -1,5 +1,9 @@
 body #main-navigation {
-    margin: 12px 10px;
+    margin: 6px 10px;
+
+     @media(min-width: 768px) {
+         margin: 12px 10px;
+     }
 
     .nav-links {
         display: none;
@@ -33,7 +37,7 @@ body #main-navigation {
 
         i {
             cursor: pointer;
-            font-size: 1.4rem;
+            font-size: 2.2rem;
             align-content: center;
         }
 
@@ -59,7 +63,7 @@ body #main-navigation {
 
         i {
             color: var(--color-pearl-bush);
-            margin: 12px 10px
+            margin: 12px 5px
         }
     }
 

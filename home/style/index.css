@@ -1,3 +1,11 @@
+.parent-info .child-info {
+  width: 80%;
+}
+@media (min-width: 768px) {
+  .parent-info .child-info {
+    width: 50%;
+  }
+}
 .parent-info .child-info .buttons {
   margin-top: 20px;
 }/*# sourceMappingURL=index.css.map */

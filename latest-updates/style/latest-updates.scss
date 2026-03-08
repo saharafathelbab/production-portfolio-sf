@@ -32,7 +32,7 @@ body .parent-info {
                 @media(min-width: 950px) {
                     display: grid;
                     grid-template-columns: repeat(2, 1fr);
-                    gap: 16px;
+                    gap: 30px;
                 }
 
                 section {
@@ -49,7 +49,6 @@ body .parent-info {
 
                     .description {
                         text-align: left;
-                        padding-bottom: 0px;
                     }
 
                     .reg-link {
@@ -76,6 +75,15 @@ body .parent-info {
                                 margin-top: 20px;
                             }
                         }
+                    }
+                }
+
+                section.recently-read {
+                    margin-top: 40px;
+
+
+                    @media(min-width: 950px) {
+                        margin-top: 0px;
                     }
                 }
             }

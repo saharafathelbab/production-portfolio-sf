@@ -1,21 +1,21 @@
 context('Main Navigation', () => {
     beforeEach(() => {
-        cy.visit('http://localhost:8000')
+        cy.visit('http://localhost:8888')
     })
 
     it('Mobile: Main Navigation', () => {
         cy.viewport(375, 667)
 
         cy.get('#main-navigation')
-            .should('have.css', 'margin', '12px 10px')
+            .should('have.css', 'margin', '6px 10px')
 
-        cy.get('#main-navigation #mobile-menu')
+        cy.get('#main-navigation .menu-toggle')
             .should('have.css', 'display', 'block')
 
-        cy.get('#main-navigation #mobile-menu #icon-button')
+        cy.get('#main-navigation .menu-toggle i')
             .should('have.css', 'cursor', 'pointer')
             .should('have.css', 'color', 'rgb(55, 79, 47)')
-            .should('have.css', 'font-size', '22.4px')
+            .should('have.css', 'font-size', '35.2px')
             .should('have.css', 'align-content', 'center')
             .should('have.class', 'fa-bars')
 
@@ -23,21 +23,21 @@ context('Main Navigation', () => {
             .should('have.css', 'display', 'none')
             .should('have.css', 'list-style-type', 'none')
 
-        cy.get('#main-navigation #mobile-menu')
+        cy.get('#main-navigation .menu-toggle')
             .should('have.attr', 'aria-label', 'Open Navigation Menu')
             .should('have.attr', 'aria-expanded', 'false')
             .should('have.attr', 'tabindex', '0')
 
-        cy.get('#main-navigation #mobile-menu #icon-button').click()
+        cy.get('#main-navigation .menu-toggle').click()
 
-        cy.get('#main-navigation #mobile-menu')
+        cy.get('#main-navigation .menu-toggle')
             .should('have.css', 'padding', '0px')
             .should('have.attr', 'aria-label', 'Close Navigation Menu')
             .should('have.attr', 'aria-expanded', 'true')
 
-        cy.get('#main-navigation #mobile-menu #icon-button')
+        cy.get('#main-navigation .menu-toggle i')
             .should('have.class', 'fa-times')
-            .should('have.css', 'margin', '12px 10px')
+            .should('have.css', 'margin', '12px 5px')
 
         cy.get('#main-navigation .nav-links')
             .should('have.class', 'active')
@@ -47,7 +47,7 @@ context('Main Navigation', () => {
             .should('have.css', 'flex-direction', 'column')
             .should('have.css', 'list-style-type', 'none')
 
-        cy.get('#main-navigation ')
+        cy.get('#main-navigation')
             .should('have.css', 'height', '667px')
             .should('have.css', 'margin', '0px')
             .should('have.css', 'background-color', 'rgb(55, 79, 47)')
@@ -63,27 +63,30 @@ context('Main Navigation', () => {
             .should('have.css', 'color', 'rgb(233, 228, 216)')
             .should('have.css', 'font-size', '16px')
 
-        cy.get('#light-dark-toggle i').click()
+        cy.get('#light-dark-toggle').click()
 
-        cy.get('#main-navigation #mobile-menu #icon-button')
+        cy.get('#main-navigation .menu-toggle i')
             .should('have.css', 'color', 'rgb(55, 79, 47)')
 
         cy.get('#main-navigation .nav-links')
             .should('have.css', 'background-color', 'rgb(233, 228, 216)')
 
-        cy.get('#main-navigation #mobile-menu #icon-button').click()
+        cy.get('#main-navigation .menu-toggle i').click()
 
-        cy.get('#main-navigation #mobile-menu #icon-button')
+        cy.get('#main-navigation .menu-toggle i')
             .should('have.class', 'fa-bars')
             .should('have.css', 'color', 'rgb(233, 228, 216)')
 
 
-        cy.get('#light-dark-toggle i').click()
+        cy.get('#light-dark-toggle').click()
 
     })
 
     it('Desktop: Main Navigation', () => {
         cy.viewport(768, 667)
+
+        cy.get('#main-navigation')
+            .should('have.css', 'margin', '12px 10px')
 
         cy.get('#main-navigation .nav-links')
             .should('have.css', 'display', 'flex')
@@ -97,41 +100,41 @@ context('Main Navigation', () => {
             .should('have.css', 'color', 'rgb(55, 79, 47)')
             .should('have.css', 'padding', '12px 5px')
 
-        cy.get('#light-dark-toggle i').click()
+        cy.get('#light-dark-toggle').click()
 
         cy.get('#main-navigation .nav-links li a')
             .should('have.css', 'color', 'rgb(233, 228, 216)')
 
-        cy.get('#light-dark-toggle i').click()
+        cy.get('#light-dark-toggle').click()
 
     })
 
     it('Window Resized: Main Navigation', () => {
         cy.viewport(767, 667)
 
-        cy.get('#main-navigation #mobile-menu')
+        cy.get('#main-navigation .menu-toggle')
             .should('have.attr', 'aria-label', 'Open Navigation Menu')
             .should('have.attr', 'aria-expanded', 'false')
             .should('have.attr', 'tabindex', '0')
 
-        cy.get('#main-navigation #mobile-menu #icon-button').click()
+        cy.get('#main-navigation .menu-toggle').click()
 
         cy.viewport(798, 667)
 
         cy.get('#main-navigation .nav-links')
             .should('not.have.class', 'active')
 
-        cy.get('#main-navigation #mobile-menu')
+        cy.get('#main-navigation .menu-toggle')
             .should('have.attr', 'aria-label', 'Open Navigation Menu')
             .should('have.attr', 'aria-expanded', 'false')
 
         cy.viewport(767, 667)
 
-        cy.get('#main-navigation #mobile-menu')
+        cy.get('#main-navigation .menu-toggle')
             .should('have.attr', 'aria-label', 'Open Navigation Menu')
             .should('have.attr', 'aria-expanded', 'false')
 
-        cy.get('#main-navigation #mobile-menu #icon-button')
+        cy.get('#main-navigation .menu-toggle i')
             .should('have.class', 'fa-bars')
 
 

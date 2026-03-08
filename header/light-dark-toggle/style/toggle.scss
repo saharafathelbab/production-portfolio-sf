@@ -5,23 +5,92 @@
         margin: 22px 10px;
     }
 
-    i.fa-sun,
-    i.fa-moon {
-        color: var(--color-tom-thumb);
-    }
+    #light-dark-toggle {
+        background-color: var(--color-tom-thumb);
+        border: 2px solid transparent;
+        border-radius: 30px;
+        width: 55px;
+        height: 28px;
+        position: relative;
+        transition: background-color 0.5s;
 
-    i {
-        font-size: 1.4rem;
-        align-content: center;
-    }
-}
-
-html[data-theme="dark"] body {
-    #light-mode-to-dark-mode-toggle {
-
-        i.fa-sun,
-        i.fa-moon {
-            color: var(--color-pearl-bush)
+        @media(min-width: 768px) {
+            width: 70px;
+            height: 35px;
         }
+
+        &:focus-visible {
+            outline: 3px solid var(--color-tom-thumb);
+            outline-offset: 3px;
+        }
+
+        .toggle-circle {
+            background-image: url('../img/mobile-sun.svg');
+            width: 15.5px;
+            height: 15.5px;
+            position: absolute;
+            top: 4px;
+            left: 4px;
+            transition: left 0.5s;
+
+            @media(min-width: 768px) {
+                background-image: url('../img/desktop-sun.svg');
+                width: 22.5px;
+                height: 22.5px;
+            }
+        }
+
+        @media (hover: hover) {
+            &:hover {
+                background-color: var(--color-pearl-bush);
+                border-color: var(--color-tom-thumb);
+
+                .toggle-circle {
+                    @media(min-width: 768px) {
+                        background-image: url('../img/desktop-sun-hover.svg');
+                    }
+                }
+            }
+        }
+
+
+
+
+    }
+
+    #light-dark-toggle[aria-pressed="true"] {
+        background-color: var(--color-pearl-bush);
+
+        &:focus-visible {
+            outline-color: var(--color-pearl-bush);
+        }
+
+        .toggle-circle {
+            background-image: url('../img/mobile-moon.svg');
+            width: 15.44px;
+            height: 15.5px;
+            left: 32px;
+
+            @media(min-width: 768px) {
+                background-image: url('../img/desktop-moon.svg');
+                width: 22px;
+                height: 23px;
+                left: 36px;
+            }
+        }
+
+        @media (hover: hover) {
+            &:hover {
+                background-color: var(--color-tom-thumb);
+                border-color: var(--color-pearl-bush);
+
+                .toggle-circle {
+                    @media(min-width: 768px) {
+                        background-image: url('../img/desktop-moon-hover.svg');
+                    }
+                }
+            }
+        }
+
     }
 }

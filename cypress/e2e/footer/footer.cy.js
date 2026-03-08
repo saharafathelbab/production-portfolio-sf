@@ -1,6 +1,6 @@
 context('Footer', () => {
     beforeEach(() => {
-        cy.visit('http://localhost:8000/about-me.html')
+        cy.visit('http://localhost:8888/about-me')
     })
 
     it('Footer', () => {
@@ -29,14 +29,14 @@ context('Footer', () => {
         cy.get('#additional-links .parent-info .child-info .buttons .button').eq(1)
             .should('have.attr', 'href', 'mailto:saharafathelbab1@gmail.com')
 
-        cy.get('#light-dark-toggle i').click()
+        cy.get('#light-dark-toggle').click()
 
 
         cy.get('#additional-links .parent-info .child-info .buttons .button')
             .should('have.css', 'color', 'rgb(55, 79, 47)')
             .should('have.css', 'background-color', 'rgb(222, 248, 213)')
 
-        cy.get('#light-dark-toggle i').click()
+        cy.get('#light-dark-toggle').click()
 
     })
 

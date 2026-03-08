@@ -1,6 +1,6 @@
 context('About', () => {
     beforeEach(() => {
-        cy.visit('http://localhost:8000/about-me.html')
+        cy.visit('http://localhost:8888/about-me')
     })
 
     it('Mobile: About', () => {
@@ -57,7 +57,7 @@ context('About', () => {
             .should('have.css', 'font-size', '16px')
             .should('have.css', 'color', 'rgb(55, 79, 47)')
 
-        cy.get('#light-dark-toggle i').click()
+        cy.get('#light-dark-toggle').click()
 
         cy.get('.parent-info .child-info .information h1')
             .should('have.css', 'color', 'rgb(233, 228, 216)')
@@ -71,7 +71,7 @@ context('About', () => {
         cy.get('.parent-info .child-info .information .extracurriculars figure figcaption')
             .should('have.css', 'color', 'rgb(233, 228, 216)')
 
-        cy.get('#light-dark-toggle i').click()
+        cy.get('#light-dark-toggle').click()
 
     })
 
