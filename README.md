@@ -51,7 +51,7 @@ Includes function that adds Nav Elements to the page and Mobile Menu Toggle.
 Contains the styling applied to the home page, ```index.html```.
 
 ##### Latest Updates
-This folder contains GraphQL - code related to fetching api data for currently reading and recently read from hardcover.app API and the style folder for the page.
+This folder contains GraphQL - code related to fetching api data for currently reading and recently read from (hardcover.app)[https://hardcover.app/] API and the style folder for the page.
 </br></br>
 Inside the GraphQL folder contains [its own respective README.md](latest-updates/GraphQL/README.md) related to coding logic and structure used.
 
@@ -67,7 +67,7 @@ Initially, all html pages are set to visibility hidden in inline. After a set am
 Functions run on all pages via a script tag in the header element.
 
 ##### Netlify/functions
-Contains Netlify Serverless Functions that allows me to utilize environment variables. At the present moment of writing this documentation, the only environment variable being used is the API_KEY from the hardcover.app.
+Contains Netlify Serverless Functions that allows me to utilize environment variables. At the present moment of writing this documentation, the only environment variable being used is the API_KEY from the [hardcover.app](https://hardcover.app/).
 </br></br>
 Inside netlify/functions folder contains [its own respective README.md](netlify/functions/README.md) related to coding logic and structure used.
 
@@ -94,14 +94,11 @@ You must run the below to be able to access the environment variables needed in 
 
  ```netlify dev```
 
-##### Staging
-https://staging-portfolio-sf.netlify.app/
-
-#### Production
+##### Production
 https://saharafathelbab.netlify.app/
 
 ##### Cypress
-For Cypress testing, please view the ```cypress``` folder. ```cypress-examples``` contains examples from cypress.io on the type of testing possible.
+For Cypress testing, please view the ```cypress``` folder. ```cypress-examples``` contains examples from (cypress.io)[https://www.cypress.io/] on the type of testing possible.
 
 ###### Open Cypress
 

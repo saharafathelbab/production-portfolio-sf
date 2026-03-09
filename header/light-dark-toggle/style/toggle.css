@@ -25,7 +25,7 @@
   outline: 3px solid var(--color-tom-thumb);
   outline-offset: 3px;
 }
-#light-mode-to-dark-mode-toggle #light-dark-toggle .toggle-circle {
+#light-mode-to-dark-mode-toggle #light-dark-toggle .toggle-icon {
   background-image: url("../img/mobile-sun.svg");
   width: 15.5px;
   height: 15.5px;
@@ -35,7 +35,7 @@
   transition: left 0.5s;
 }
 @media (min-width: 768px) {
-  #light-mode-to-dark-mode-toggle #light-dark-toggle .toggle-circle {
+  #light-mode-to-dark-mode-toggle #light-dark-toggle .toggle-icon {
     background-image: url("../img/desktop-sun.svg");
     width: 22.5px;
     height: 22.5px;
@@ -48,7 +48,7 @@
   }
 }
 @media (hover: hover) and (min-width: 768px) {
-  #light-mode-to-dark-mode-toggle #light-dark-toggle:hover .toggle-circle {
+  #light-mode-to-dark-mode-toggle #light-dark-toggle:hover .toggle-icon {
     background-image: url("../img/desktop-sun-hover.svg");
   }
 }
@@ -58,14 +58,14 @@
 #light-mode-to-dark-mode-toggle #light-dark-toggle[aria-pressed=true]:focus-visible {
   outline-color: var(--color-pearl-bush);
 }
-#light-mode-to-dark-mode-toggle #light-dark-toggle[aria-pressed=true] .toggle-circle {
+#light-mode-to-dark-mode-toggle #light-dark-toggle[aria-pressed=true] .toggle-icon {
   background-image: url("../img/mobile-moon.svg");
   width: 15.44px;
   height: 15.5px;
   left: 32px;
 }
 @media (min-width: 768px) {
-  #light-mode-to-dark-mode-toggle #light-dark-toggle[aria-pressed=true] .toggle-circle {
+  #light-mode-to-dark-mode-toggle #light-dark-toggle[aria-pressed=true] .toggle-icon {
     background-image: url("../img/desktop-moon.svg");
     width: 22px;
     height: 23px;
@@ -79,7 +79,7 @@
   }
 }
 @media (hover: hover) and (min-width: 768px) {
-  #light-mode-to-dark-mode-toggle #light-dark-toggle[aria-pressed=true]:hover .toggle-circle {
+  #light-mode-to-dark-mode-toggle #light-dark-toggle[aria-pressed=true]:hover .toggle-icon {
     background-image: url("../img/desktop-moon-hover.svg");
   }
 }/*# sourceMappingURL=toggle.css.map */

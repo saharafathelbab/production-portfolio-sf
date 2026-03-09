@@ -24,7 +24,7 @@
             outline-offset: 3px;
         }
 
-        .toggle-circle {
+        .toggle-icon {
             background-image: url('../img/mobile-sun.svg');
             width: 15.5px;
             height: 15.5px;
@@ -45,7 +45,7 @@
                 background-color: var(--color-pearl-bush);
                 border-color: var(--color-tom-thumb);
 
-                .toggle-circle {
+                .toggle-icon {
                     @media(min-width: 768px) {
                         background-image: url('../img/desktop-sun-hover.svg');
                     }
@@ -65,7 +65,7 @@
             outline-color: var(--color-pearl-bush);
         }
 
-        .toggle-circle {
+        .toggle-icon {
             background-image: url('../img/mobile-moon.svg');
             width: 15.44px;
             height: 15.5px;
@@ -84,7 +84,7 @@
                 background-color: var(--color-tom-thumb);
                 border-color: var(--color-pearl-bush);
 
-                .toggle-circle {
+                .toggle-icon {
                     @media(min-width: 768px) {
                         background-image: url('../img/desktop-moon-hover.svg');
                     }

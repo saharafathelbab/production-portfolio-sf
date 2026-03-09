@@ -28,7 +28,7 @@ context('Toggle', () => {
             .should('have.css', 'position', 'relative')
             .should('have.css', 'background-color', 'rgb(55, 79, 47)')
 
-        cy.get('#light-mode-to-dark-mode-toggle button .toggle-circle')
+        cy.get('#light-mode-to-dark-mode-toggle button .toggle-icon')
             .should('have.css', 'background-image', 'url("http://localhost:8888/header/light-dark-toggle/img/mobile-sun.svg")')
             .should('have.css', 'width', '15.5px')
             .should('have.css', 'height', '15.5px')
@@ -49,7 +49,7 @@ context('Toggle', () => {
             .should('have.attr', 'aria-pressed', 'true')
             .should('have.css', 'background-color', 'rgb(233, 228, 216)')
 
-        cy.get('#light-mode-to-dark-mode-toggle button .toggle-circle')
+        cy.get('#light-mode-to-dark-mode-toggle button .toggle-icon')
             .should('have.css', 'background-image', 'url("http://localhost:8888/header/light-dark-toggle/img/mobile-moon.svg")')
             .should('have.css', 'width', '15.4375px')
             .should('have.css', 'height', '15.5px')
@@ -76,14 +76,14 @@ context('Toggle', () => {
             .should('have.css', 'width', '70px')
             .should('have.css', 'height', '35px')
 
-        cy.get('#light-mode-to-dark-mode-toggle button .toggle-circle')
+        cy.get('#light-mode-to-dark-mode-toggle button .toggle-icon')
             .should('have.css', 'background-image', 'url("http://localhost:8888/header/light-dark-toggle/img/desktop-sun.svg")')
             .should('have.css', 'width', '22.5px')
             .should('have.css', 'height', '22.5px')
 
         cy.get('#light-dark-toggle').click()
 
-        cy.get('#light-mode-to-dark-mode-toggle button .toggle-circle')
+        cy.get('#light-mode-to-dark-mode-toggle button .toggle-icon')
             .should('have.css', 'background-image', 'url("http://localhost:8888/header/light-dark-toggle/img/desktop-moon.svg")')
             .should('have.css', 'width', '22px')
             .should('have.css', 'height', '23px')

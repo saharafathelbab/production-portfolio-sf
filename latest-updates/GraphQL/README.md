@@ -1,7 +1,7 @@
 # Overview
 ```helper-functions```
 </br></br>
-Contains the functions used to add each individual item retrieved from the Hardcover.app API for both Currently Reading and Recently Read books to the HTML file.
+Contains the functions used to add each individual item retrieved from the [hardcover.app](https://hardcover.app/) API for both Currently Reading and Recently Read books to the HTML file.
 
 ```fetchAPIData.js```
 </br></br>
