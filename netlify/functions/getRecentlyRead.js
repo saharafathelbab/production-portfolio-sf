@@ -1,4 +1,4 @@
-const { API_KEY, API_ENDPOINT, USER_ID } = require('./utils');
+const { USER_ID, API_KEY, API_ENDPOINT } = require('./utils');
 
 const recentlyReadGraphQLQuery = `
 query RecentlyRead {
